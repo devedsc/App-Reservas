@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Crear Canchas</h1>
+
+{{error}}
+<form action="/task/create/" method="POST">
+    {% csrf_token %}
+
+    {{form}}
+    <button>
+        Guardar
+    </button>
+
+</form>
+{% endblock %}
